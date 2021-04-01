@@ -1,0 +1,117 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <style>
+            * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:sans-serif;
+  margin: 25px;
+  color: #222;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  font-weight: bold;
+  
+}
+
+p {
+  max-width: 900px;
+}
+
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #87D37C;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 5px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+input[type=submit] {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #E4F1FE;
+  border: 1px solid grey;
+  box-shadow: 2px 2px #999;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #FFFEC4;
+}
+
+code {
+  font-family: monospace;
+  font-size: 1.2em;
+  background-color: #FFFEC4;
+  padding: 2px;
+}
+            </style>
+        <title> Signup form </title>
+        </head>
+        <body>
+            <form action="/signup" method = "POST">
+                <input type = "text" name="username" placeholder="Enter your current username">
+                <br><br>
+            <input type = "email" name = "email" placeholder="Enter your Email to update"/>
+            <br/><br/>
+           <input type = "password" name = "password" placeholder="Enter your password"/>
+           <br><br>
+            <select name = "University">
+                <option selected> -- Select an Institute -- </option>
+                <option> Inst 1 </option>
+                <option> Inst 2 </option>
+                <option> Inst 3 </option>
+            </select><br/><br/>
+            <p> Choose A gender
+        <input type="radio" name="gender" value="Male"/> Male
+        <input type="radio" name="gender" value="Female"/> Female
+        <br/>
+        <br/>
+
+        <button type = "Submit"> Submit the data? </button>
+            </form>
+           <br>
+            <form action="/view" method = "get">
+                Enter your username<input type = "text" name="username">
+                <button type="submit"> View Data? </button>
+            </form>
+
+            <form action="/update" method = "POST">
+                <input type = "text" name  ="username" placeholder="Enter your current Username">
+
+                <input type = "email" name = "new_email" placeholder="Enter your new Email"/>
+            <br/><br/>
+            <input type = "text" name ="new_uname" placeholder = "Enter your Username"/>
+            <br/><br/>
+            
+            <select name = "new_univ">
+                <option selected> -- Select an Institute -- </option>
+                <option> Inst 1 </option>
+                <option> Inst 2 </option>
+                <option> Inst 3 </option>
+            </select><br/><br/>
+            <button type="submit"> Update Data? </button>
+            </form>
+
+            <form action="/delete" method = "get">
+                Enter your username<input type = "text" name="username">
+                <button type="submit"> Delete Data? </button>
+            </form>
+
+        </body>
